@@ -13,17 +13,17 @@ https://tigervnc.org/
 https://bintray.com/tigervnc/stable/tigervnc/1.9.0
 
 
-selenium/base: Base image which includes Java runtime and Selenium Server JAR file
-selenium/hub: Image for running a Grid Hub
-selenium/node-base: Base image for Grid Nodes which includes a virtual desktop environment
-selenium/node-chrome: Grid Node with Chrome installed, needs to be connected to a Grid Hub
-selenium/node-firefox: Grid Node with Firefox installed, needs to be connected to a Grid Hub
-selenium/node-chrome-debug: Grid Node with Chrome installed and runs a VNC server, needs to be connected to a Grid Hub
-selenium/node-firefox-debug: Grid Node with Firefox installed and runs a VNC server, needs to be connected to a Grid Hub
-selenium/standalone-chrome: Selenium Standalone with Chrome installed
-selenium/standalone-firefox: Selenium Standalone with Firefox installed
-selenium/standalone-chrome-debug: Selenium Standalone with Chrome installed and runs a VNC server
-selenium/standalone-firefox-debug: Selenium Standalone with Firefox installed and runs a VNC server
+    selenium/base: Base image which includes Java runtime and Selenium Server JAR file
+    selenium/hub: Image for running a Grid Hub
+    selenium/node-base: Base image for Grid Nodes which includes a virtual desktop environment
+    selenium/node-chrome: Grid Node with Chrome installed, needs to be connected to a Grid Hub
+    selenium/node-firefox: Grid Node with Firefox installed, needs to be connected to a Grid Hub
+    selenium/node-chrome-debug: Grid Node with Chrome installed and runs a VNC server, needs to be connected to a Grid Hub
+    selenium/node-firefox-debug: Grid Node with Firefox installed and runs a VNC server, needs to be connected to a Grid Hub
+    selenium/standalone-chrome: Selenium Standalone with Chrome installed
+    selenium/standalone-firefox: Selenium Standalone with Firefox installed
+    selenium/standalone-chrome-debug: Selenium Standalone with Chrome installed and runs a VNC server
+    selenium/standalone-firefox-debug: Selenium Standalone with Firefox installed and runs a VNC server
 
 $ docker run -d -p 4444:4444 -v /dev/shm:/dev/shm selenium/standalone-chrome:3.141.59-neon
 
