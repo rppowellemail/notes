@@ -181,3 +181,82 @@ gradle run
 gradle shadowJar
 java -jar build/libs/gradle-three-1.0-SNAPSHOT-all.jar
 ```
+
+# gradle-four
+
+https://imperceptiblethoughts.com/shadow/getting-started/
+
+```
+plugins {
+  id 'com.github.johnrengelman.shadow' version '5.0.0'
+  id 'java'
+}
+```
+
+or
+
+```
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.github.jengelman.gradle.plugins:shadow:5.0.0'
+    }
+}
+
+apply plugin: 'com.github.johnrengelman.shadow'
+apply plugin: 'java'
+```
+
+## files
+
+`src/main/groovy/HelloWorld.groovy`
+
+```
+println "Hello World!"
+```
+
+`build.gradle`
+
+```
+plugins {
+    id 'com.github.johnrengelman.shadow' version '5.0.0'
+    id 'groovy'
+}
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.5.7'
+}
+
+task runScript (dependsOn: 'classes', type: JavaExec) {
+    main = 'HelloWorld'
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'HelloWorld'
+    }
+}
+```
+
+## build steps
+
+```
+groovy src/main/groovy/HelloWorld.groovy
+```
+
+```
+gradle run
+```
+
+```
+gradle shadowJar
+java -jar build/libs/gradle-three-1.0-SNAPSHOT-all.jar
+```
