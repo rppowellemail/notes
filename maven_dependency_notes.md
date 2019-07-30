@@ -26,5 +26,6 @@ Can use the following to download just dependencies:
     </project>
 
 Use as:
+
     mvn dependency:resolve
 
