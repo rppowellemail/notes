@@ -1,6 +1,6 @@
-# Scene2d - Skin programmatically
+# Scene2d - Adding to Skin programmatically
 
-Adding to `Skin()` programmatically.
+Adding Styles to `Skin()` programmatically.
 
 Using `gdx-tools` extension, load `uiskin.json` and assets:
 
