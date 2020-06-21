@@ -1,3 +1,10 @@
+`git_set_profile.sh`
+
+Use the following to set `user.name`/`user.email` for projects/profiles:
+
+    git config --global user.name "Rob Powell"
+    git config --global user.email "rppowellemail@gmail.com"
+
 `git_pull_remotes.sh`
 
 Use the following to pull all remote branches:
