@@ -12,66 +12,45 @@ Reference:
 
 * https://stackoverflow.com/questions/38285929/errors-while-configuring-groovy-in-libgdx-game
 
-
-Global `build.gradle`:
-
-    project(":core") {
-        apply plugin: "java-library"
-    
-        dependencies {
-            api "com.badlogicgames.gdx:gdx:$gdxVersion"
-            api "com.badlogicgames.gdx:gdx-box2d:$gdxVersion"
-            
-        }
-    }
-
-    project(":core") {
-        apply plugin: "java-library"
-        apply plugin: "groovy"
-    
-        dependencies {
-            api "com.badlogicgames.gdx:gdx:$gdxVersion"
-            api "com.badlogicgames.gdx:gdx-box2d:$gdxVersion"
-            api "org.codehaus.groovy:groovy-all:2.5.14"
-    
-        }
-    }
-
-----
+## Create and Import the libGDX project (gdx-start)
 
 Create stub project using gdx-start
 
     java -jar gdx-setup.jar
-    
+
 Using the following:
 
 Name        | Value
--------------------
+------------|------
 Name        |`libGDX202102141650`
 Package     |`com.mygdx.game`
 Game class  |`MyGdxGame`
 Destination |`C:\Users\rppowell\Desktop\libgdx\libGDX202102141650`
 Android SDK |`C:\Path\To\Your\Sdk`
 
-Sub Projects: `Desktop` checked
+Sub Projects:
+* `Desktop` checked
 
-Extensions: None checked
+Extensions:
+* None checked
 
-Generate
+Click on `Generate` to generate the project.
 
 Import into IntelliJ:
-* File -> New -> Project from Existing Sources...
+* `File` -> `New` -> `Project from Existing Sources...`
 
-Select `C:\Users\rppowell\Desktop\Learning\libGDX202102141650\build.gradle`
+Select the project `build.gradle` file:
+* `C:\Users\rppowell\Desktop\Learning\libGDX202102141650\build.gradle`
 
 ---
 
-Add `groovy`
+## Add `groovy` to project `build.gradle`
 
 Edit `C:\Users\rppowell\Desktop\Learning\libGDX202102141650\build.gradle`
 
 Before:
 
+    ...
     project(":core") {
         apply plugin: "java-library"
     
@@ -82,9 +61,11 @@ Before:
             
         }
     }
+    ...
 
 After:
 
+    ...
     project(":core") {
         apply plugin: "groovy"
         apply plugin: "java-library"
@@ -97,36 +78,9 @@ After:
     
         }
     }
+    ...
 
 ---
-
-Create `java`/`groovy` code directories
-
-* `C:\Users\rppowell\Desktop\Learning\libGDX202102141650\core\src\java`
-* `C:\Users\rppowell\Desktop\Learning\libGDX202102141650\core\src\groovy`
-
-Move `C:\Users\rppowell\Desktop\Learning\libGDX202102141650\core\src\com` to `C:\Users\rppowell\Desktop\Learning\libGDX202102141650\core\src\java`
-
-Change `Program Structure` by going to:
-
-* File -> Program Structure...
-
-Or:
-
-* Ctrl + Alt + Shift + S
-
-Under `Project Settings`, select `Modules`.
-
-Under Modules, select:
-
-    libGDX202102141650
-      core
-        main
-
-Unmark `Sources` for `C:\Users\rppowell\Desktop\Learning\libGDX202102141650\core\src`
-Mark `Sources` for:
-  * `groovy`
-  * `java`
 
 Edit `C:\Users\rppowell\Desktop\Learning\libGDX202102141650\core\build.gradle`
 
@@ -142,7 +96,35 @@ To:
             groovy { srcDir "src" }
         }
     }
-    
+
+Create `java`/`groovy` code directories
+
+* `C:\Users\rppowell\Desktop\Learning\libGDX202102141650\core\src\java`
+* `C:\Users\rppowell\Desktop\Learning\libGDX202102141650\core\src\groovy`
+
+Move `C:\Users\rppowell\Desktop\Learning\libGDX202102141650\core\src\com` to `C:\Users\rppowell\Desktop\Learning\libGDX202102141650\core\src\java`
+
+Change `Program Structure` by going to:
+
+* `File` -> `Program Structure...`
+
+Or:
+
+* Ctrl + Alt + Shift + S
+
+Under `Project Settings`, select `Modules`.
+
+Under Modules, select:
+
+    libGDX202102141650
+      core
+        main
+
+Unmark `Sources` for `C:\Users\rppowell\Desktop\Learning\libGDX202102141650\core\src`
+Mark `Sources` for:
+* `groovy`
+* `java`
+
 Under `Project`, Right-Click `core` and select `Add Framework Support...`
 
 In `Add Frameworks Support`, check `Groovy`, and under `Use library` select `Gradle: org.codehaus.groovy:groovy-all:2.3.11`
@@ -183,3 +165,6 @@ To:
 		}
 	}
 
+To run go to `Gradle`:
+
+* `libGDX202102141650` -> `Tasks` -> `other` -> `run`
