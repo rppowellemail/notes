@@ -1,16 +1,4 @@
-
-
-References:
-
-* https://impetus-games.com/blog/libGDX-the-Groovy-Way (obsolete)
-
-----
-
-Adding `groovy` to LibGDX starter project
-
-Reference:
-
-* https://stackoverflow.com/questions/38285929/errors-while-configuring-groovy-in-libgdx-game
+# Adding `groovy` to LibGDX starter project
 
 ## Create and Import the libGDX project (gdx-start)
 
@@ -90,10 +78,24 @@ Change:
 
 To:
 
+    sourceSets.main.java.srcDirs = [ "src/java" ]
+    sourceSets.main.groovy.srcDirs = [ "src/groovy" ]
+
+Or:
+
     sourceSets {
         main {
             java { srcDirs = [] }
             groovy { srcDir "src" }
+        }
+    }
+
+Or:
+
+    sourceSets {
+        main {
+            java { srcDir  "src/java/" }
+            groovy { srcDir "src/groovy/" }
         }
     }
 
@@ -168,3 +170,10 @@ To:
 To run go to `Gradle`:
 
 * `libGDX202102141650` -> `Tasks` -> `other` -> `run`
+
+----
+
+# References:
+
+* https://stackoverflow.com/questions/38285929/errors-while-configuring-groovy-in-libgdx-game
+* https://impetus-games.com/blog/libGDX-the-Groovy-Way (obsolete)
