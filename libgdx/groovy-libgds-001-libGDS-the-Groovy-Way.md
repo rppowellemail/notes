@@ -177,3 +177,11 @@ To run go to `Gradle`:
 
 * https://stackoverflow.com/questions/38285929/errors-while-configuring-groovy-in-libgdx-game
 * https://impetus-games.com/blog/libGDX-the-Groovy-Way (obsolete)
+
+----
+
+Trying to use `desktop > org.codehaus.groovy:groovy-all:3.0.7`, getting error:
+
+Set in `build.gradle`:
+
+    sourceCompatibility = 1.8
