@@ -8,6 +8,6 @@ https://github.com/jidesoft/jide-oss | JIDE Common Layer (Open Source Project) h
 
 The Java Trove
 * https://github.com/aalmiray/javatrove
-* * https://andresalmiray.com/articles/the-java-trove-part-i/
+* * https://andresalmiray.com/articles/the-java-trove-part-i/ / https://community.oracle.com/tech/developers/discussion/4418064/the-java-trove-part-i
 * * https://andresalmiray.com/articles/the-java-trove-part-ii/
 * https://blogs.oracle.com/java/java-trove-part1
