@@ -1,5 +1,11 @@
 # Pygame multiplayer with sockets tutorial 001
 
+Reference:
+
+* https://www.youtube.com/watch?v=_fx7FQ3SP0U
+
+## Simple pygame setup
+
 Create a simple `pygame` startup:
 
 `client.py`
@@ -75,7 +81,9 @@ Create a simple `pygame` startup:
             clock.tick(FPS)
     
             pygame.display.update()
-    
+
+## Server and Client
+
 Create the `server`:
 
 `server.py`
