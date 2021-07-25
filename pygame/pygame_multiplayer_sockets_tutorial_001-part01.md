@@ -1,4 +1,4 @@
-# Pygame multiplayer with sockets tutorial 001
+# Pygame multiplayer with sockets tutorial 001 part 01
 
 Reference:
 
