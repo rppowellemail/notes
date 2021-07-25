@@ -6,7 +6,7 @@ Reference:
 * Part 2 - https://www.youtube.com/watch?v=_whymdfq-R4 - Python Online Game Tutorial #2 - Creating a Server
 * Part 3 - https://www.youtube.com/watch?v=qbL4hPWcnFM - Python Online Game Tutorial #3 - Sending & Receiving Information From Server
 * Part 4 - https://www.youtube.com/watch?v=F257x_E6H4k - Python Online Game Tutorial #4 - Connecting Multiple Clients
-
+* Part 5 - https://www.youtube.com/watch?v=UIlO7TbwrBE - Python Online Game Tutorial #5 - Sending Objects With Pickle!
 
 Refactored to use `pickle`:
 
