@@ -2,7 +2,11 @@
 
 Reference:
 
-* https://www.youtube.com/watch?v=_fx7FQ3SP0U
+* Part 1 - https://www.youtube.com/watch?v=_fx7FQ3SP0U - Python Online Game Tutorial #1 - Creating a Client Using Sockets
+* Part 2 - https://www.youtube.com/watch?v=_whymdfq-R4 - Python Online Game Tutorial #2 - Creating a Server
+* Part 3 - https://www.youtube.com/watch?v=qbL4hPWcnFM - Python Online Game Tutorial #3 - Sending & Receiving Information From Server
+* Part 4 - https://www.youtube.com/watch?v=F257x_E6H4k - Python Online Game Tutorial #4 - Connecting Multiple Clients
+
 
 Updated files:
 
