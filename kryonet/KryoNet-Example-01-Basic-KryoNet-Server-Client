@@ -19,6 +19,18 @@ Add the 'all-in-one' jar to the classpath/add as library module to project:
 
 `jars/production/onejar/kryonet-2.21-all.jar`
 
+### Gradle Dependency
+
+Add the following to `build.gradle`:
+
+```gradle
+dependencies {
+    // https://mvnrepository.com/artifact/com.esotericsoftware/kryonet
+    implementation group: 'com.esotericsoftware', name: 'kryonet', version: '2.22.0-RC1'
+    ...
+}
+```
+
 ## The Shared Classes
 
 `KryoNetMessage.java`
