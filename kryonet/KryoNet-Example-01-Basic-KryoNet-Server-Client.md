@@ -31,6 +31,19 @@ dependencies {
 }
 ```
 
+Or:
+
+```gradle
+dependencies {
+    // https://mvnrepository.com/artifact/kryonet/kryonet
+    implementation group: 'kryonet', name: 'kryonet', version: '2.21'
+    // or
+    // implementation group: 'kryonet', name: 'kryonet-all', version: '2.21'
+    ...
+}
+```
+
+
 ## The Shared Classes
 
 `KryoNetMessage.java`
