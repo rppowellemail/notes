@@ -115,3 +115,42 @@ public class KryoNetServer extends Listener {
     }
 }
 ```
+
+## The Client
+
+`KryoNetClient.java`
+
+```java
+import com.esotericsoftware.kryonet.Client;
+import com.esotericsoftware.kryonet.Connection;
+import com.esotericsoftware.kryonet.Listener;
+
+import java.io.IOException;
+
+public class KryoNetClient extends Listener {
+    static Client client;
+    static boolean messageReceived = false;
+    public static void main(String[] args) throws IOException, InterruptedException {
+        client = new Client();
+        KryoNetShared.register(client.getKryo());
+        client.start();
+        client.connect(5000, KryoNetShared.serverHostname, KryoNetShared.tcpPort, KryoNetShared.udpPort);
+        client.addListener(new KryoNetClient());
+        System.out.println("Client waiting for message...");
+        while(!messageReceived) {
+            Thread.sleep(100);
+        }
+        System.out.println("Client exiting.");
+        System.exit(0);
+    }
+
+    @Override
+    public void received(Connection connection, Object o) {
+        if (o instanceof KryoNetMessage) {
+            KryoNetMessage m = (KryoNetMessage) o;
+            System.out.println("Client received: " + m.message);
+            messageReceived = true;
+        }
+    }
+}
+```
