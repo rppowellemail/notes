@@ -1,3 +1,4 @@
+Summary: Change from using `lwjgl` to `lwjgl3`.
 
 The following message when running:
 
