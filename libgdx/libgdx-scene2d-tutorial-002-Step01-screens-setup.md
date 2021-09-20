@@ -184,5 +184,8 @@ public class MenuScreen implements Screen {
         stage.getViewport().update(width, height, true);
     }
 ...
+    @Override public void dispose() {
+        stage.dispose();
+    }
 }
 ```
