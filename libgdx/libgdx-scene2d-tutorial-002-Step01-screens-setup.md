@@ -85,7 +85,7 @@ public class LoadingScreen implements Screen {
 
 Edit `Box2DTutorial.java` to:
 
-```
+``` java
 public class Box2DTutorial extends Game {
 
     private LoadingScreen loadingScreen;
@@ -142,7 +142,7 @@ Edit `LoadingScreen.java` and change behavior for `render()`:
 
 Setup `MenuScreen` to use scene:
 
-```
+``` java
 public class MenuScreen implements Screen {
     private Box2DTutorial parent;
     private Stage stage;
