@@ -70,12 +70,18 @@ driver.save_screenshot('screenshot-002-' + datetime.now().isoformat() + '.png')
 driver.close()
 ```
 
+# Shutdown
+
+Remember to shutdown/cleanup your docker container(s):
+
+```
+MT-206707:~ rppowell$ docker stop 213cf651b954
+213cf651b954
+MT-206707:~ rppowell$
+```
 
 # Selenium Notes
 
 Use the url for the running selenium instance:
 
 * http://127.0.0.1:4444/wd/hub/static/resource/hub.html
-
-
-
