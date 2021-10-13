@@ -18,7 +18,6 @@ import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.ValueSource
 import org.junit.platform.launcher.listeners.LoggingListener
 
-
 import java.util.logging.ConsoleHandler
 import java.util.logging.Level
 import java.util.logging.Logger
