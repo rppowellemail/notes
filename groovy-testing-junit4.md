@@ -1,7 +1,8 @@
 # JUnit4 example
 
+`JUnit4ExampleTests.groovy`
+
 ```groovy
-JUnit4ExampleTests.groovy 
 @Grab('junit:junit')
 
 import org.junit.Test
