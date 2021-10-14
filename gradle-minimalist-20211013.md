@@ -1,4 +1,4 @@
-# Gradle - minimumalist
+# Gradle - Minimalist
 
 Minimalist gralde to build/run java program
 
