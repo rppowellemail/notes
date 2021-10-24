@@ -25,7 +25,7 @@ Create with options:
 
 Create the following Screen classes:
 
-* `LoadingScreen
+* `LoadingScreen`
 * `MenuScreen`
 * `PreferencesScreen`
 * `MainScreen`
@@ -57,7 +57,7 @@ public class LoadingScreen implements Screen {
 
 Edit the following Screen classes:
 
-* `LoadingScreen
+* `LoadingScreen`
 * `MenuScreen`
 * `PreferencesScreen`
 * `MainScreen`
