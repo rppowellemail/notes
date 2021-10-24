@@ -31,69 +31,70 @@ public class MyGdxGame extends ApplicationAdapter {
     Stage stage;
 
     public void create () {
-        stage = new Stage();
-        Gdx.input.setInputProcessor(stage);
-        Skin skin = new Skin(Gdx.files.internal("uiskin.json"));
+	private Stage stage;
+	
+	@Override
+	public void create () {
+		stage = new Stage();
+		Gdx.input.setInputProcessor(stage);
+		Skin skin = new Skin(Gdx.files.internal("uiskin.json"));
 
-        Label nameLabel = new Label("Name:", skin);
-        TextField nameText = new TextField("", skin);
-        Label addressLabel = new Label("Address:", skin);
-        TextField addressText = new TextField("", skin);
+		Table table = new Table();
+		table.setSize(260, 195);
+		table.setPosition(190, 142);
+		table.debug();
+		stage.addActor(table);
 
-        Table table = new Table();
-        stage.addActor(table);
-        table.setSize(260, 195);
-        table.setPosition(190, 142);
-        // table.align(Align.right | Align.bottom);
+		TextureRegion upRegion = skin.getRegion("default-slider-knob");
+		TextureRegion downRegion = skin.getRegion("default-slider-knob");
+		BitmapFont buttonFont = skin.getFont("default-font");
 
-        table.debug();
+		TextButton button = new TextButton("Button 1", skin);
+		button.addListener(new InputListener() {
+			public boolean touchDown (InputEvent event, float x, float y, int pointer, int button) {
+				System.out.println("touchDown 1");
+				return false;
+			}
+		});
+		table.add(button);
 
-        TextureRegion upRegion = skin.getRegion("default-slider-knob");
-        TextureRegion downRegion = skin.getRegion("default-slider-knob");
-        BitmapFont buttonFont = skin.getFont("default-font");
+		Table table2 = new Table();
+		stage.addActor(table2);
+		table2.setFillParent(true);
+		table2.bottom();
+		table2.debug();
 
-        TextButton button = new TextButton("Button 1", skin);
-        button.addListener(new InputListener() {
-            public boolean touchDown (InputEvent event, float x, float y, int pointer, int button) {
-                System.out.println("touchDown 1");
-                return false;
-            }
-        });
-        table.add(button);
-        // table.setTouchable(Touchable.disabled);
+		TextButton button2 = new TextButton("Button 2", skin);
+		button2.addListener(new ChangeListener() {
+			public void changed (ChangeEvent event, Actor actor) {
+				System.out.println("2!");
+			}
+		});
+		button2.addListener(new InputListener() {
+			public boolean touchDown (InputEvent event, float x, float y, int pointer, int button) {
+				System.out.println("touchDown 2");
+				return false;
+			}
+		});
+		table2.add(button2);	}
 
-        Table table2 = new Table();
-        stage.addActor(table2);
-        table2.setFillParent(true);
-        table2.bottom();
+	@Override
+	public void render () {
+		float delta = Gdx.graphics.getDeltaTime();
 
-        TextButton button2 = new TextButton("Button 2", skin);
-        button2.addListener(new ChangeListener() {
-            public void changed (ChangeEvent event, Actor actor) {
-                System.out.println("2!");
-            }
-        });
-        button2.addListener(new InputListener() {
-            public boolean touchDown (InputEvent event, float x, float y, int pointer, int button) {
-                System.out.println("touchDown 2");
-                return false;
-            }
-        });
-        table2.add(button2);
-    }
+		Gdx.gl.glClearColor(1, 0, 0, 1);
+		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+		stage.act(delta);
+		stage.draw();
+	}
 
-    public void render () {
-        Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-        stage.act(Gdx.graphics.getDeltaTime());
-        stage.draw();
-    }
+	public void resize (int width, int height) {
+		stage.getViewport().update(width, height, true);
+	}
 
-    public void resize (int width, int height) {
-        stage.getViewport().update(width, height, true);
-    }
-
-    public void dispose () {
-        stage.dispose();
-    }
+	@Override
+	public void dispose () {
+		stage.dispose();
+	}
 }
 ```
