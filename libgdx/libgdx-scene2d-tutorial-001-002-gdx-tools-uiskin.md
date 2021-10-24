@@ -4,7 +4,29 @@ Uses `gdx-tools` extension;
 
 * https://github.com/libgdx/libgdx/tree/master/extensions/gdx-tools
 
+Download:
+
+* https://raw.githubusercontent.com/libgdx/libgdx/master/extensions/gdx-tools/assets/uiskin.json
+* https://raw.githubusercontent.com/libgdx/libgdx/master/extensions/gdx-tools/assets/uiskin.png
+* https://raw.githubusercontent.com/libgdx/libgdx/master/extensions/gdx-tools/assets/uiskin.atlas
+* https://raw.githubusercontent.com/libgdx/libgdx/master/extensions/gdx-tools/assets/default.fnt
+* https://raw.githubusercontent.com/libgdx/libgdx/master/extensions/gdx-tools/assets/default.png
+
+Save in `core/assets` directory
+
 ```
+import com.badlogic.gdx.ApplicationAdapter;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.badlogic.gdx.scenes.scene2d.Actor;
+import com.badlogic.gdx.scenes.scene2d.InputEvent;
+import com.badlogic.gdx.scenes.scene2d.InputListener;
+import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.badlogic.gdx.scenes.scene2d.ui.*;
+import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
+
 public class MyGdxGame extends ApplicationAdapter {
     Stage stage;
 
