@@ -69,8 +69,8 @@ Add constructor taking `Box2DTutorial` as parameter:
 ``` java
 public class LoadingScreen implements Screen {
     private Box2DTutorial parent;
-    public LoadingScreen(Box2DTutorial box2dTutorial){
-        parent = box2dTutorial;
+    public LoadingScreen(Box2DTutorial box2DTutorial){
+        parent = box2DTutorial;
     }
     @Override public void show() { }
     @Override public void render(float delta) { }
