@@ -1,9 +1,9 @@
 Reference:
 
-* https://www.gamedevelopment.blog/full-libgdx-game-tutorial-project-setup/
-* https://www.gamedevelopment.blog/full-libgdx-game-tutorial-menu-control/
-* https://www.gamedevelopment.blog/full-libgdx-game-tutorial-box2d/
-* **https://www.gamedevelopment.blog/full-libgdx-game-tutorial-box2d-body-factory/**
+* Step 1 - https://www.gamedevelopment.blog/full-libgdx-game-tutorial-project-setup/
+* Step 2 - https://www.gamedevelopment.blog/full-libgdx-game-tutorial-menu-control/
+* Step 3 - https://www.gamedevelopment.blog/full-libgdx-game-tutorial-box2d/
+* **Step 4 - https://www.gamedevelopment.blog/full-libgdx-game-tutorial-box2d-body-factory/**
 
 # Create BodyFactory class
 
