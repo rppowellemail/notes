@@ -3,6 +3,7 @@ Based on
 
 Get gdx-skin from here:
 * https://github.com/czyzby/gdx-skins
+* https://github.com/czyzby/gdx-skins/tree/master/glassy/skin
 
 Copy from archive `gdx-skins-master/glassy` to project `assets/skin`:
 
@@ -18,7 +19,7 @@ Create with options:
 
 * Name: `my-gdx-game`
 * Package: `com.mygdx.game`
-* Game class: `Box2DTutorial'
+* Game class: `Scene2DTutorial`
 
 
 # Step 2 - Create screens
