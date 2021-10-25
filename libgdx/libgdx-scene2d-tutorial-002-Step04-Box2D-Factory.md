@@ -89,6 +89,9 @@ Adding method `makeCirclePolyBody()`:
         circleShape.dispose();
         return boxBody;
     }
+    public Body makeCirclePolyBody(float posx, float posy, float radius, int material){
+        return makeCirclePolyBody( posx,  posy,  radius,  material,  BodyDef.BodyType.DynamicBody,  false);
+    }
 ```
 
 Add to `B2DModel` constructor:
@@ -111,5 +114,86 @@ Add to `B2DModel` constructor:
 
         // add a new stone at position -4,1
         bodyFactory.makeCirclePolyBody(-4, 1, 2, BodyFactory.STONE, BodyDef.BodyType.DynamicBody,false);
+    }
+```
+
+## Rectangle Shaped Bodies
+
+Adding method `makeBoxPolyBody()` to `BodyFactory`:
+
+```
+    public Body makeBoxPolyBody(float posx, float posy, float width, float height,int material, BodyDef.BodyType bodyType, boolean fixedRotation){
+        // create a definition
+        BodyDef boxBodyDef = new BodyDef();
+        boxBodyDef.type = bodyType;
+        boxBodyDef.position.x = posx;
+        boxBodyDef.position.y = posy;
+        boxBodyDef.fixedRotation = fixedRotation;
+
+        //create the body to attach said definition
+        Body boxBody = world.createBody(boxBodyDef);
+        PolygonShape poly = new PolygonShape();
+        poly.setAsBox(width/2, height/2);
+        boxBody.createFixture(makeFixture(material,poly));
+        poly.dispose();
+
+        return boxBody;
+    }
+
+    public Body makeBoxPolyBody(float posx, float posy, float width, float height,int material, BodyDef.BodyType bodyType){
+        return makeBoxPolyBody(posx, posy, width, height, material, bodyType, false);
+    }
+```
+
+## Making Polygon Shaped Bodies
+
+```
+    public Body makePolygonShapeBody(Vector2[] vertices, float posx, float posy, int material, BodyDef.BodyType bodyType){
+        BodyDef boxBodyDef = new BodyDef();
+        boxBodyDef.type = bodyType;
+        boxBodyDef.position.x = posx;
+        boxBodyDef.position.y = posy;
+        Body boxBody = world.createBody(boxBodyDef);
+
+        PolygonShape polygon = new PolygonShape();
+        polygon.set(vertices);
+        boxBody.createFixture(makeFixture(material,polygon));
+        polygon.dispose();
+
+        return boxBody;
+    }
+```
+
+## Make cone shaped bodies
+
+```
+public class BodyFactory {
+    private World world;
+    private static BodyFactory thisInstance;
+    public static final int STEEL = 0;
+    public static final int WOOD = 1;
+    public static final int RUBBER = 2;
+    public static final int STONE = 3;
+    private final float DEGTORAD = 0.0174533f;    
+...
+
+    public void makeConeSensor(Body body, float size){
+
+        FixtureDef fixtureDef = new FixtureDef();
+        //fixtureDef.isSensor = true; // will add in future
+
+        PolygonShape polygon = new PolygonShape();
+
+        float radius = size;
+        Vector2[] vertices = new Vector2[5];
+        vertices[0] = new Vector2(0,0);
+        for (int i = 2; i < 6; i++) {
+            float angle = (float) (i  / 6.0 * 145 * DEGTORAD); // convert degrees to radians
+            vertices[i-1] = new Vector2( radius * ((float)Math.cos(angle)), radius * ((float)Math.sin(angle)));
+        }
+        polygon.set(vertices);
+        fixtureDef.shape = polygon;
+        body.createFixture(fixtureDef);
+        polygon.dispose();
     }
 ```
