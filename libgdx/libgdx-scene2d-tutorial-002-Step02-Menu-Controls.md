@@ -4,7 +4,9 @@ Reference:
 * Step 1 - https://www.gamedevelopment.blog/full-libgdx-game-tutorial-project-setup/
 * **Step 2 - https://www.gamedevelopment.blog/full-libgdx-game-tutorial-menu-control/**
 
-# Step 2
+# Step 2 - Screen Behaviors
+
+## Adding ChangeListener
 
 Edit `MenuScreen.java` and add ChangeListener:
 
@@ -35,7 +37,7 @@ Edit `MenuScreen.java` and add ChangeListener:
 ...
 ```
 
-# Step 2
+## Adding Preferences handling
 
 Create `AppPreferences.java` and add Preferences:
 
@@ -107,7 +109,7 @@ public class Box2DTutorial extends Game {
 }
 ```
 
-# Step 3 - Creating PreferencesScreen scene
+## Creating PreferencesScreen scene
 
 ```
 public class PreferencesScreen implements Screen {
@@ -151,7 +153,7 @@ public class PreferencesScreen implements Screen {
 }
 ```
 
-# Step 4 - Adding to PreferencesScreen scene
+## Adding to PreferencesScreen scene
 
 Edit `PreferencesScreen.java`:
 
