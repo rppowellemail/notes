@@ -1,9 +1,7 @@
-References:
+Reference:
 
 * https://www.gamedevelopment.blog/full-libgdx-game-tutorial-project-setup/
 * **https://www.gamedevelopment.blog/full-libgdx-game-tutorial-menu-control/**
-
-
 
 # Step 1
 
