@@ -230,8 +230,9 @@ Edit `PreferencesScreen.java`:
 Fixing the formatting:
 
 ```
+        table.row().pad(10, 0, 10, 10);
         table.add(titleLabel).colspan(2);
-        table.row().pad(10, 0, 10, 0);
+        table.row().pad(10, 0, 0, 10);
         table.add(volumeMusicLabel).left();
         table.add(volumeMusicSlider);
         table.row().pad(10, 0, 0, 10);;
