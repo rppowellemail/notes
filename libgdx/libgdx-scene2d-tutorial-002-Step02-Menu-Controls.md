@@ -210,7 +210,7 @@ Edit `PreferencesScreen.java`:
         volumeSoundLabel = new Label( "Sound Volume", skin );
         soundOnOffLabel = new Label( "Sound Effect", skin );
 
-        table.add(titleLabel).colspan(2);
+        table.add(titleLabel);
         table.row().pad(10, 0, 10, 0);
         table.add(volumeMusicLabel);
         table.add(volumeMusicSlider);
@@ -222,6 +222,26 @@ Edit `PreferencesScreen.java`:
         table.add(soundMusicSlider);
         table.row();
         table.add(soundOnOffLabel);
+        table.add(soundEffectsCheckbox);
+        table.row();
+        table.add(backButton);
+```
+
+Fixing the formatting:
+
+```
+        table.add(titleLabel).colspan(2);
+        table.row().pad(10, 0, 10, 0);
+        table.add(volumeMusicLabel).left();
+        table.add(volumeMusicSlider);
+        table.row();
+        table.add(musicOnOffLabel).left();
+        table.add(musicCheckbox);
+        table.row();
+        table.add(volumeSoundLabel).left();
+        table.add(soundMusicSlider);
+        table.row();
+        table.add(soundOnOffLabel).left();
         table.add(soundEffectsCheckbox);
         table.row();
         table.add(backButton).colspan(2);
