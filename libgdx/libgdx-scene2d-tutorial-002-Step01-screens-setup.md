@@ -1,5 +1,6 @@
-Based on
-* https://www.gamedevelopment.blog/full-libgdx-game-tutorial-project-setup/
+Reference:
+
+* **https://www.gamedevelopment.blog/full-libgdx-game-tutorial-project-setup/**
 
 Get gdx-skin from here:
 * https://github.com/czyzby/gdx-skins
