@@ -4,7 +4,17 @@ Reference:
 
 # Step 1 - Project Setup
 
-## assets
+## Project Setup
+
+### create with `gdx-setup.jar`
+
+Create with options:
+
+* Name: `my-gdx-game`
+* Package: `com.mygdx.game`
+* Game class: `Scene2DTutorial`
+
+### asset resources
 
 Get gdx-skin from here:
 * https://github.com/czyzby/gdx-skins
@@ -18,16 +28,7 @@ Copy from archive `gdx-skins-master/glassy` to project `assets/skin`:
     assets/skin/glassy-ui.json
     assets/skin/glassy-ui.png
     
-## create with `gdx-setup.jar`
-
-Create with options:
-
-* Name: `my-gdx-game`
-* Package: `com.mygdx.game`
-* Game class: `Scene2DTutorial`
-
-
-# Step 2 - Create screens
+## Create screen classes
 
 Create the following Screen classes:
 
@@ -59,7 +60,7 @@ public class LoadingScreen implements Screen {
 }
 ```
 
-# Step 3 - Wire up Screens
+## Wire up Screens
 
 Edit the following Screen classes:
 
@@ -87,7 +88,7 @@ public class LoadingScreen implements Screen {
 }
 ```
 
-# Step 4
+## Implement `changeScreen()` method
 
 Edit `Box2DTutorial.java` to:
 
@@ -144,7 +145,7 @@ Edit `LoadingScreen.java` and change behavior for `render()`:
     }
 ```
 
-# Step 5
+## Setup `MenuScreen` to use scene
 
 Setup `MenuScreen` to use scene:
 
