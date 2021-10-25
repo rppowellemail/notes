@@ -1,6 +1,10 @@
 Reference:
 
-* **https://www.gamedevelopment.blog/full-libgdx-game-tutorial-project-setup/**
+* Step 1 - **https://www.gamedevelopment.blog/full-libgdx-game-tutorial-project-setup/**
+
+# Step 1 - Project Setup
+
+## assets
 
 Get gdx-skin from here:
 * https://github.com/czyzby/gdx-skins
@@ -14,7 +18,7 @@ Copy from archive `gdx-skins-master/glassy` to project `assets/skin`:
     assets/skin/glassy-ui.json
     assets/skin/glassy-ui.png
     
-# Step 1 - Project Setup
+## create with `gdx-setup.jar`
 
 Create with options:
 
