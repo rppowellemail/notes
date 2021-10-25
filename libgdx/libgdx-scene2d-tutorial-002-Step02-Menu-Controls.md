@@ -129,6 +129,11 @@ public class PreferencesScreen implements Screen {
         
     }
 ...
+
+    @Override public void show() {
+        Gdx.input.setInputProcessor(stage);
+    }
+    
     @Override
     public void render(float delta) {
         Gdx.gl.glClearColor(0f, 0f, 0f, 1);
