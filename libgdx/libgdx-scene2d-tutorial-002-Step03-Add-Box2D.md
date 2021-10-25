@@ -4,9 +4,11 @@ Reference:
 * Step 2 - https://www.gamedevelopment.blog/full-libgdx-game-tutorial-menu-control/
 * **Step 3 - https://www.gamedevelopment.blog/full-libgdx-game-tutorial-box2d/**
 
-# Step 3
+# Step 3 - Box2D Model class
 
-Create a `B2DModel` class:
+## Creating the `B2DModel` class
+
+Create `B2DModel` class:
 
 ```
 import com.badlogic.gdx.math.Vector2;
@@ -54,7 +56,7 @@ And update `MainScreen` `render(float delta)`:
     }
 ```
 
-# Adding Body
+## Adding Body instances
 
 Add `bodyd` (dynamic), `bodys` (static), `bodyk` (kenematic) member:
 
