@@ -234,16 +234,16 @@ Fixing the formatting:
         table.row().pad(10, 0, 10, 0);
         table.add(volumeMusicLabel).left();
         table.add(volumeMusicSlider);
-        table.row();
+        table.row().pad(10, 0, 0, 10);;
         table.add(musicOnOffLabel).left();
         table.add(musicCheckbox);
-        table.row();
+        table.row().pad(10, 0, 0, 10);;
         table.add(volumeSoundLabel).left();
         table.add(soundMusicSlider);
-        table.row();
+        table.row().pad(10, 0, 0, 10);;
         table.add(soundOnOffLabel).left();
         table.add(soundEffectsCheckbox);
-        table.row();
+        table.row().pad(10, 0, 0, 10);;
         table.add(backButton).colspan(2);
 ```
 
