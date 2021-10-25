@@ -210,7 +210,7 @@ Edit `PreferencesScreen.java`:
         volumeSoundLabel = new Label( "Sound Volume", skin );
         soundOnOffLabel = new Label( "Sound Effect", skin );
 
-        table.add(titleLabel);
+        table.add(titleLabel).colspan(2);
         table.row().pad(10, 0, 10, 0);
         table.add(volumeMusicLabel);
         table.add(volumeMusicSlider);
@@ -224,7 +224,7 @@ Edit `PreferencesScreen.java`:
         table.add(soundOnOffLabel);
         table.add(soundEffectsCheckbox);
         table.row();
-        table.add(backButton);
+        table.add(backButton).colspan(2);
 ```
 
 Edit `MenuScreen.java` to move the `Gdx.input.setInputProcessor(stage)` to `show()`:
