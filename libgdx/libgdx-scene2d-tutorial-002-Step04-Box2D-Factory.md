@@ -5,7 +5,9 @@ Reference:
 * Step 3 - https://www.gamedevelopment.blog/full-libgdx-game-tutorial-box2d/
 * **Step 4 - https://www.gamedevelopment.blog/full-libgdx-game-tutorial-box2d-body-factory/**
 
-# Create BodyFactory class
+# Step 4 - BodyFactory class
+
+## Create BodyFactory class
 
 Create `BodyFactory` class with singleton:
 
