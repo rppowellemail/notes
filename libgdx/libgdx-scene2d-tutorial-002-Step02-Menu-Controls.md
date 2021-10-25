@@ -1,9 +1,10 @@
 
-References:
+Reference:
 
-* https://www.gamedevelopment.blog/full-libgdx-game-tutorial-menu-control/
+* Step 1 - https://www.gamedevelopment.blog/full-libgdx-game-tutorial-project-setup/
+* **Step 2 - https://www.gamedevelopment.blog/full-libgdx-game-tutorial-menu-control/**
 
-# Step 1
+# Step 2
 
 Edit `MenuScreen.java` and add ChangeListener:
 
