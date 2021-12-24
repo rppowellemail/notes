@@ -1,5 +1,15 @@
 # Raspberry Pi 3
 
+References
+
+* https://www.youtube.com/watch?v=pWM4PCqrVc8
+* https://docs.google.com/document/d/1Dx0ULT92xrry8st9WiNmAKN5KsdqH_XYhNgyWsu8WOo/edit
+* 
+TODO:
+
+* Pi-Hole - DNS
+* LibreNMS -
+* Unifi Controller - Ubiquity wifi management
 
 Using
 
@@ -60,6 +70,7 @@ password: raspberry
 ```
 sudo apt update
 sudo apt upgrade
+sudo raspi-config
 ```
 
 ## Installing Pi-Hole
