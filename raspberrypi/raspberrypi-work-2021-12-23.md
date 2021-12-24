@@ -45,3 +45,25 @@ network={
   key_mgmt=WPA-PSK
 }
 ```
+
+## login
+
+Find the ip address and connect/login:
+
+```
+username: pi
+password: raspberry
+```
+
+## Updating
+
+```
+sudo apt update
+sudo apt upgrade
+```
+
+## Installing Pi-Hole
+
+```
+curl -sSL https://install.pi-hole.net | bash
+```
