@@ -120,7 +120,6 @@ public class PreferencesScreen implements Screen {
     public PreferencesScreen(Box2DTutorial box2dTutorial){
         parent = box2dTutorial;
         stage = new Stage(new ScreenViewport());
-        Gdx.input.setInputProcessor(stage);
 
         // Create a table that fills the screen. Everything else will go inside this table.
         Table table = new Table();
@@ -212,12 +211,12 @@ Edit `PreferencesScreen.java`:
             }
         });
 
-        titleLabel = new Label( "Preferences", skin );
-        volumeMusicLabel = new Label( "Music Volume", skin );
-        musicOnOffLabel = new Label( "Music", skin );
-        volumeSoundLabel = new Label( "Sound Volume", skin );
-        soundOnOffLabel = new Label( "Sound Effect", skin );
-
+        Label titleLabel = new Label( "Preferences", skin );
+        Label volumeMusicLabel = new Label( "Music Volume", skin );
+        Label musicOnOffLabel = new Label( "Music", skin );
+        Label volumeSoundLabel = new Label( "Sound Volume", skin );
+        Label soundOnOffLabel = new Label( "Sound Effect", skin );
+	
         table.add(titleLabel);
         table.row().pad(10, 0, 10, 0);
         table.add(volumeMusicLabel);
