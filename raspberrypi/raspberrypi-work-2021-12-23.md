@@ -92,3 +92,5 @@ sudo raspi-config
 ```
 curl -sSL https://install.pi-hole.net | bash
 ```
+
+TODO: configure Pi-Hole
