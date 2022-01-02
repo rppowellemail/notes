@@ -34,7 +34,9 @@ Raspberry Pi Imager - Custom Image
 
 Under `Operating Systems`/`Choose OS`, there is option `Use custom`
 
-
+Enter `<CTRL>-<SHIFT>-X` to enter advance options menu, includes:
+* set hostname
+* enable ssh
 
 After writing the image to the thumb drive, mount and create a blank `ssh` file in the `boot` partition.
 
